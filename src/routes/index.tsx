@@ -9,7 +9,7 @@ export const Route = createFileRoute('/')({ component: Home })
 
 const minutes = Math.round(tracks.reduce((sum, track) => sum + track.duration, 0) / 60000)
 function time(ms: number) { return `${Math.floor(ms / 60000)}:${String(Math.floor(ms / 1000) % 60).padStart(2, '0')}` }
-function photo(src: string, width: number) { return `/.netlify/images?url=${encodeURIComponent(src)}&w=${width}&fm=webp` }
+function photo(src: string, _width: number) { return src }
 
 function Home() {
   const [playerOpen, setPlayerOpen] = useState(false)
